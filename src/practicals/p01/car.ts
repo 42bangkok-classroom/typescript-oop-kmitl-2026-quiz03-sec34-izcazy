@@ -1,21 +1,18 @@
 export class Car {
-    brand: string
-    model: string
+    brand: string = ''
+    model: string = ''
 
-    constructor(){
-        this.brand = ''
-        this.model = ''
-    }
+
     start(): void{
-        console.log('Toyota Camry is starting...')
+        console.log(`${this.brand} ${this.model} is starting...`)
     }
     accelerate(){
-        console.log('Toyota Camry is accelerating...')
+        console.log(`${this.brand} ${this.model} is accelerating...`)
     }
     brake(){
-        console.log('Toyota Camry is braking...')
+        console.log(`${this.brand} ${this.model} is braking...`)
     }
     stop(){
-        console.log('Toyota Camry is stopping...')
+        console.log(`${this.brand} ${this.model} is stopping...`)
     }
 }
