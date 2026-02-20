@@ -6,7 +6,7 @@ export class Car {
         this.brand = ''
         this.model = ''
     }
-    start(){
+    start(): void{
         console.log('Toyota Camry is starting...')
     }
     accelerate(){
