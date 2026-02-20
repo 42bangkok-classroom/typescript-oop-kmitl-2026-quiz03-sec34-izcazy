@@ -13,14 +13,15 @@ export class User {
         this.lastname = lastname
     }
     setAge(age: number){
-        if(age <= 0){
-            this.age = age
-        }
+        return this.age
     }
     getAge(){
         return this.age
     }
     getFullName(){
+        if(!this.firstname && !this.lastname){
+            return ""
+        }
         return(`${this.firstname} ${this.lastname}`)
     }
 }
