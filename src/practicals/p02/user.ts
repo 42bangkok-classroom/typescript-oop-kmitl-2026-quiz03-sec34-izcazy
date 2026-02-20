@@ -1,19 +1,16 @@
 export class User {
-    public firstname: string 
-    public lastname: string 
+    private firstname?: string 
+    private lastname?: string 
     private age: number = 0
     static  BIRTH_YEAR: number = 2000
 
-    constructor(firstname: string, lastname: string){
-        this.firstname = firstname
-        this.lastname = lastname
-    }
 
-    setFirstname(){
-        return(`${this.firstname}`)
+
+    setFirstname(firstname: string){
+        this.firstname = firstname
     }
-    setLastname(){
-        return(`${this.lastname}`)
+    setLastname(lastname: string){
+        this.lastname = lastname
     }
     setAge(age: number){
         if(age <= 0){
