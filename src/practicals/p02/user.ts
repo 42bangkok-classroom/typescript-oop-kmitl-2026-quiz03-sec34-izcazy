@@ -1,7 +1,7 @@
 export class User {
     private firstname?: string 
     private lastname?: string 
-    private age: number = 0
+    private age?: number 
     static  BIRTH_YEAR: number = 2000
 
 
@@ -13,7 +13,7 @@ export class User {
         this.lastname = lastname
     }
     setAge(age: number){
-        return this.age
+        this.age = age
     }
     getAge(){
         return this.age
