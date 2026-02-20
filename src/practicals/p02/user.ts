@@ -1,13 +1,13 @@
 export class User {
-    firstname: string
-    lastname: string
+    firstname: string = ''
+    lastname: string = ''
     private age: number = 0
     static  BIRTH_YEAR: number = 2000
 
-    constructor(firstname: string, lastname: string){
+    /*constructor(firstname: string, lastname: string){
         this.firstname = firstname
         this.lastname = lastname
-    }
+    }*/
 
     setFirstname(){
         return(`${this.firstname}`)
