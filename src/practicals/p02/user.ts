@@ -4,9 +4,9 @@ export class User {
     private age: number = 0
     static  BIRTH_YEAR: number = 2000
 
-    constructor(){
-        this.firstname = ''
-        this.lastname = ''
+    constructor(firstname: string, lastname: string){
+        this.firstname = firstname
+        this.lastname = lastname
     }
 
     setFirstname(){
