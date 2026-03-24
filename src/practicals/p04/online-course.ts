@@ -5,19 +5,27 @@ export class OnlineCourse {
     private isOpen: boolean = true
 
     constructor(courseName: string, maxStudents: number){
-        this.courseName = courseName
-        this.maxStudents = maxStudents
+        this.courseName = courseName;
+        this.maxStudents = maxStudents;
+        this.enrolledStudents = 0;
+        this.isOpen = true;
     }
-    enroll(): boolean{
-        return this.canEnroll()
+    public enroll(): boolean{
+        if(this.canEnroll()){
+            this.enrolledStudents++;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-    closeCourse(): void{
+    public closeCourse(): void{
         this.isOpen = false
     }
-    getAvailableSeats(): number{
-        return this.maxStudents
+    public getAvailableSeats(): number{
+        return this.maxStudents - this.enrolledStudents;
     }
-    getCourseStatus(): string{
+    public getCourseStatus(): string{
         return this.isOpen ? 'Open' : 'Closed'
     }
     private canEnroll():boolean{
