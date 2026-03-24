@@ -23,14 +23,13 @@ export class OnlineCourse {
         this.isOpen = false
     }
     public getAvailableSeats(): number{
-        this.maxStudents -= this.enrolledStudents
-        return this.maxStudents;
+        return this.maxStudents - this.enrolledStudents;
     }
     public getCourseStatus(): string{
         return this.isOpen ? 'Open' : 'Closed'
     }
     private canEnroll():boolean{
-        if(this.maxStudents > 0 && this.isOpen){
+        if(this.maxStudents - this.enrolledStudents > 0 && this.isOpen){
             return true
         }
         this.closeCourse()
