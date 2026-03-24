@@ -9,7 +9,7 @@ export class Warrior extends Character {
     this.weapon = weapon
   }
   getWeapon(): string{
-    return this.getWeapon()
+    return this.weapon;
   }
   override receiveDamage(damage: number): void {
         this.health -= damage; 
