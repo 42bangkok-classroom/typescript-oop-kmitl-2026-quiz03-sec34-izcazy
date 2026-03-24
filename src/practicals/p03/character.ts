@@ -3,11 +3,8 @@ export class Character {
     health: number = 100
 
     constructor(name: string, health: number = 100){
-        this.name = name
-
-        if(health >= 100){
-            this.health = health
-        }
+        this.name = name;
+        this.health = health;
     }
     getName(): string{
         return this.name
