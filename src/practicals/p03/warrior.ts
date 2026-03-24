@@ -11,4 +11,7 @@ export class Warrior extends Character {
   getWeapon(): string{
     return this.getWeapon()
   }
+  override receiveDamage(damage: number): void {
+        this.health -= damage; 
+    }
 }
