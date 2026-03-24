@@ -9,6 +9,6 @@ export class Warrior extends Character {
     this.weapon = weapon
   }
   getWeapon(): string{
-    
+    return this.getWeapon()
   }
 }
