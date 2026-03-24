@@ -7,10 +7,10 @@ export class PaymentMethod {
     public getAccountName(): string {
         return this.accountName;
     }
-    public processPayment(amount: number): boolean {
-        return false;
+    public processPayment(_amount: number): boolean { // _ คือเป็นการบอกว่าตัวแปรนี้ไม่ถูกใช้แต่จำเป็นต้องมี
+        return true;
     }
-    public getPaymentFee(amount: number): number {
+    public getPaymentFee(_amount: number): number {
         return 0;
     }
 }
