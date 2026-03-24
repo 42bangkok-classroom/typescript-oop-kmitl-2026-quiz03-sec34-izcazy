@@ -33,6 +33,7 @@ export class OnlineCourse {
         if(this.maxStudents > 0 && this.isOpen){
             return true
         }
+        this.closeCourse()
         return false
 
     }
