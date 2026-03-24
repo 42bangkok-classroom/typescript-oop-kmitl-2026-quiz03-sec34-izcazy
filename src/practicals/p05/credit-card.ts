@@ -1,4 +1,6 @@
-export class CreditCard {
+import { PaymentMethod } from "./payment-method";
+
+export class CreditCard extends PaymentMethod {
     private cardNumber: string;
 
     constructor(accountName: string, cardNumber: string){

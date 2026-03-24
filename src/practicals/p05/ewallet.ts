@@ -1,4 +1,6 @@
-export class EWallet {
+import { PaymentMethod } from "./payment-method";
+
+export class EWallet extends PaymentMethod {
     private walletId: string;
 
     constructor(accountName: string, wallerId: string){
